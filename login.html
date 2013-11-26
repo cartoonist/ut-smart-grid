@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <body>
+	  You should login to your Google account!
+	  <br />
+	  <a href="{{ url|safe }}">{{ url_linktext }}</a>
+  </body>
+</html>
+{% endautoescape %}

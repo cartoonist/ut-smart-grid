@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <body>
+    Device: {{ device_id }}
+    <hr>
+    {% for observation in observations %}
+      {% set date = observation.date.strftime('%c') %}
+      {{ date }}:
+      <blockquote>Voltage = {{ observation.voltage }}</blockquote>
+      <blockquote>Amperage = {{ observation.amperage }}</blockquote>
+      <hr>
+    {% endfor %}
+
+    You are logged in with {{ user_email }}. <a href="{{ url|safe }}">{{ url_linktext }}</a>
+
+  </body>
+</html>
+{% endautoescape %}

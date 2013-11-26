@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <body>
+	There's no device assigned to this account. Register your device:
+	<br>
+	<form action="/signup" method="post">
+		<input type="text" name="device_id">
+		<input type="submit" value="Add device">
+	</form>
+	<hr>
+	You are logged in with {{ user_email }}. <a href="{{ url|safe }}">{{ url_linktext }}</a>
+  </body>
+</html>
+{% endautoescape %}
